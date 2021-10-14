@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title> Signup form </title>
+
+     <script>
+         function welcome() {
+         }
+
+        function validateform() {
+            if (document.forms[0].fname.value == '') {
+                alert('Fill in first name');
+                return false;
+            }
+
+            if (document.forms[0].lname.value == '') {
+                alert('Fill in last name');
+                return false;
+            }
+
+            if (document.forms[0].email.value == '') {
+                alert('Fill in your email address');
+                return false;
+            }
+        }
+     </script>
+
+<style>
+	
+legend
+{
+    text-align: center;
+    color: darkblue;
+}
+
+.pd
+{
+    display: block;
+    float: left;
+    text-align: right;
+}
+
+input:hover
+{
+    animation: glow 3s infinite;
+}
+
+@keyframes glow {
+    from{box-shadow: 0 0 10px black;}
+    to{box-shadow: 0 0 0px;}
+}
+.form
+{
+    box-shadow: 0 0 10px black;
+}
+
+
+</style>
+</head>
+<body onload="return welcome();" >
+
+
+<div class="form">
+<form action="http://infotech.scu.edu.au/cgi-bin/echo_form" method="post" onsubmit="return validateform();">
+<fieldset>
+    <legend> <h1> SIGNUP FORM </h1> </legend>
+        <fieldset>
+            <legend><h3> PERSONAL DETAILS </h3></legend>
+            <div class="pd">
+        <label> First name: <input type="text" name="fname" id="fname" maxlength="60"> </label> <br> <br>
+        <label> Last name: <input type="text" name="lname" id="lname" maxlength="60"> </label> <br> <br>
+        <label> Email: <input type="email" name="email" id="email" maxlength="60"> </label>
+    </div>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend> <h3> AGE GROUP </h3></legend>
+        <label> <input type="radio"> 15-25 </label> <br> <br>
+        <label> <input type="radio"> 26-35 </label> <br> <br>
+        <label> <input type="radio"> 36-45 </label> <br> <br>
+        <label> <input type="radio"> 46-55 </label> <br> <br>
+        <label> <input type="radio"> 55+   </label> <br> <br>
+    </fieldset>
+    
+    <fieldset>
+        <legend> <h3> MUSICAL TASTE </h3></legend>
+        <label> <input type="checkbox"> Heavy metal </label> <br> <br>
+        <label> <input type="checkbox"> Country and western </label> <br> <br>
+        <label> <input type="checkbox"> Classical </label> <br> <br>
+        <label> <input type="checkbox"> Rock & Roll </label> <br> <br>
+        <label> <input type="checkbox"> Pop </label> <br> <br>
+        <label> <input type="checkbox"> Folk </label> <br> <br>
+        <label> <input type="checkbox"> Blues </label> <br> <br>
+        <label> <input type="checkbox"> Jazz </label> <br> <br>
+        <label> <input type="checkbox"> Disco </label> <br> <br>
+        <label> <input type="checkbox"> Opera </label> <br> <br>
+    </fieldset>
+
+    <fieldset>
+        <legend> <h3> TEXT AREA </h3> </legend>
+        <textarea id="txtarea" name="comment" placeholder="Please inform to us if you didn't find your music taste in above list. Please comment in here...." cols="60" rows="3"></textarea>
+    </fieldset>
+    <br> <br>
+    <input type="submit" name="submit">
+    <input type="reset" name="reset">
+
+</fieldset>
+</form>
+</div>
+
+</body>
+</html>
